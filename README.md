@@ -9,9 +9,9 @@ Automatically get notified by email when there is a decision added to Grad Cafe 
 python manage.py runserver
 
 # Set up database and migrations for Django
- python manage.py makemigrations results
- python manage.py migrate
- python manage.py createsuperuser
+- python manage.py makemigrations results
+- python manage.py migrate
+- python manage.py createsuperuser
 
 # Description
 Periodically[Every hour] scrapes gradcafe to check for new decisions with respect to decisions in the current database. If any user[stored in database] has saved these schools/branches as his interests, sends an email to the user.
