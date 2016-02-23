@@ -8,6 +8,7 @@ Head to https://gradcafemonitor.herokuapp.com/results/ to see this web app in ac
 
 # How-to Run
 python manage.py runserver
+python daemon.py
 
 # Set up database and migrations for Django
 - python manage.py makemigrations results
