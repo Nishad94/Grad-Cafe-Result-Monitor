@@ -7,8 +7,8 @@ Head to https://gradcafemonitor.herokuapp.com/results/ to see this web app in ac
 - Scrapy
 
 # How-to Run
-python manage.py runserver
-python daemon.py
+- python manage.py runserver
+- python daemon.py
 
 # Set up database and migrations for Django
 - python manage.py makemigrations results
