@@ -7,7 +7,8 @@ Automatically get notified by email when there is a decision added to Grad Cafe 
 
 # How-to Run
 python manage.py runserver
-  # Set up database and migrations
+
+# Set up database and migrations for Django
   python manage.py makemigrations results
   python manage.py migrate
   python manage.py createsuperuser
