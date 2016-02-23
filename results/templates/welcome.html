@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<!-- Custom styles for this template -->
+    <link href="{% static "css/signin.css" %}" rel="stylesheet">
+
+<div class="container">
+
+      <form class="form-signin" action=" {% url 'save_college' %}" method="post">
+        {% csrf_token %}
+        <h2 class="form-signin-heading"></h2>
+        <label for="college" class="sr-only">College</label>
+        <input type="text" name="college" class="form-control" placeholder="Name of college" required autofocus>
+        <label for="branch" class="sr-only">Branch</label>
+        <input type="text" name="branch" class="form-control" placeholder="Branch" required autofocus>
+       
+        	
+	    <div class="input-group">
+	      <span class="input-group-addon">
+	        <input type="radio" name="degree" id="ms" value="ms">
+	      </span>
+	      <input type="text" class="form-control"  placeholder="MS" readonly>	
+	    </div><!-- /input-group -->
+	    <div class="input-group">
+	      <span class="input-group-addon">
+	        <input type="radio" name="degree" id="phd" value="phd">
+	      </span>
+	      <input type="text" class="form-control"  placeholder="PhD" readonly>
+	    </div><!-- /input-group -->
+	    <br>
+	    
+
+	    <button class="btn btn-lg btn-primary btn-block" type="submit">Save College</button><br><br>
+	    <h1><a href="{% url 'listOfColleges' %}"><span class="label label-warning">View saved colleges</span></a></h1><br><br>
+	    <h3><a href="{% url 'swapSubscription' %}"><span class="label label-success">Subscribe/Unsubscribe</span></a></h3>
+      </form>
+
+    </div> <!-- /container -->
+
+
+
+{% endblock %}

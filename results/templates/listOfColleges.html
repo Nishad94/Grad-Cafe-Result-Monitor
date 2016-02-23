@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load staticfiles %}
+<br><a href="{% url "deleteColleges" %}"><button type="button" class="btn btn-lg btn-danger">Delete all colleges</button></a><br><br>
+	<div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>College</th>
+                  <th>Branch</th>
+                  <th>Degree</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                {% for school, branch, degree in data %}
+                	<tr>
+                		<td> {{ forloop.counter }} </td>
+                		<td> {{ school }} </td>
+                		<td> {{ branch }} </td>
+                		<td> {{ degree }} </td>
+                	</tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+{% endblock %}
